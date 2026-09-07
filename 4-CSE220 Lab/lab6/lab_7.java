@@ -1,14 +1,5 @@
 public class lab_7 {
-    HOM3LAND3R
-th3_hom3land3r
-Visual Studio Code
 
-This is the start of the #monthly-count channel. 
-HOM3LAND3R — 05/03/26 16:48
-May - 4 
-HOM3LAND3R — Yesterday at 21:05
-https://www.youporn.com/watch/15428864/jasmine-jae-takes-the-biggest-load-ever/
-HOM3LAND3R — 20:59
  public class lab8{
     public static void task2a(int[][] m){
       int i=0;
@@ -16,9 +7,7 @@ HOM3LAND3R — 20:59
       int v=0;
       int ans=0;
 
-A8_Sec17_24301001.txt
-4 KB
-﻿
+
  public class lab8{
     public static void task2a(int[][] m){
       int i=0;
@@ -115,6 +104,5 @@ A8_Sec17_24301001.txt
     l[0][0]=1;w[0][0]=3;c[0]++;l[0][1]=2;w[0][1]=2;c[0]++;l[1][0]=3;w[1][0]=4;c[1]++;l[2][0]=0;w[2][0]=1;c[2]++;l[2][1]=4;w[2][1]=5;c[2]++;l[3][0]=1;w[3][0]=2;c[3]++;l[3][1]=2;w[3][1]=6;c[3]++;l[4][0]=3;w[4][0]=3;c[4]++;    
     System.out.println("task3b");
     task3b(l,w,c);}}
-A8_Sec17_24301001.txt
-4 KB
+
 }
