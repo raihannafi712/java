@@ -6,7 +6,7 @@ public class Task4 {
         // This method prints the leaf nodes of the tree
         // This method returns nothing
         // No Helper Methods are needed for this task
-        public static void printLeafNodes( BTNode root ){
+        public static void printLeafNodes( BTNode root ){               /* IMPORTANT */
             if (root == null) {
                 return;
             }

@@ -139,15 +139,16 @@
 
 
 
-        //Sorts an array from low to high (ascending order) - Maxheap
+        //Sorts an array from low to high (ascending order) - Maxheap O(nLogn)
         public static void outPlaceHeapsort(Integer[] arr){
 
             if (arr.length == 0) {
                 return;
             }
 
-            MaxHeap heap = new MaxHeap(arr.length);                 //Suppose, Capacity = 4 , heap.length = 5
-
+            MaxHeap heap = new MaxHeap(arr.length);                 //No need for arr;megth +1. The constructor automatically does it
+            //Suppose, Capacity = 4 , heap.length = 5
+            
             for (int i = 0; i < arr.length; i++) {
                 
                 heap.insert(arr[i]);                                //all the elemets are inserted and sorted as maxHeap in the heap in each addition

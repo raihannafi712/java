@@ -5,7 +5,7 @@ public class Task5 {
         // This method takes 1 parameter, the root
         // This method returns the largest value
         // No Helper Methods are needed for this task
-        public static Integer maxTree( BTNode root ){
+        public static Integer maxTree( BTNode root ){           /* IMPORTANT */
             if (root == null) {
                 return 0;                                       /* It won't work if all nodes are negative nums  */
             }

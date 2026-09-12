@@ -6,7 +6,8 @@ public class Task5 {
     // This method takes only one parameter
     // it is root of the given tree
     // You can use extra helper private static methods as per need
-    public static Integer mirrorSum(BSTNode root){
+    public static Integer mirrorSum(BSTNode root){                              /* IMPORTANT */
+
 
         if (root == null) {
             return 0;
@@ -36,8 +37,8 @@ public class Task5 {
         total += mirrorHelper(left.right, right.left);
 
         return total;
-    }
 
+    }
 
 
 

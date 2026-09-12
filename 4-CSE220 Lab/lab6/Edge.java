@@ -5,9 +5,13 @@
  */
 public class Edge {
 
-    int target_vertex;
-    Edge next;
+    int target_vertex;                          //For directed graph
+    int elem;                                   // Weight of the directed edge
+    Edge next;                                  // Reference to the next outgoing edge in the list
 
+    
+    //Both constructor works for undirected and directed graphs
+    //For unweighted graph
     public Edge(int target_vertex){
 
         this.target_vertex = target_vertex;
@@ -15,45 +19,10 @@ public class Edge {
 
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // int target;
-    // int weight;
-
-    // public Edge(int target, int weight) {
-    //     this.target = target;
-    //     this.weight = weight;
-    // }
+    //For weighted graphs
+    public Edge(int to, int elem, Edge next) {
+        this.target_vertex = to;
+        this.elem = elem;
+        this.next = next;
+    }
 }

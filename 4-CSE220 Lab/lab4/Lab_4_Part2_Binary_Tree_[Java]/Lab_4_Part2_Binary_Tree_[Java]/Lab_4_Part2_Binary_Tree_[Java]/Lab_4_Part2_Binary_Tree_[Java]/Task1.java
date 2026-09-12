@@ -7,32 +7,33 @@ public class Task1 {
     // This method takes only 1 parameter; root of a BST
     // You'll need to find the max of the BST and return it
     public static Integer maxOfBST(BSTNode root) {
-        if (root == null) {                             //If the BST is empty
-            return null;
+
+        if (root == null) {
+            return 0;
         }
 
-        if (root.right == null) {                       //If the BST does not has a right subtree
-            return (Integer) root.elem;
+        if (root.right == null) {
+            return root.elem;
         }
 
         return maxOfBST(root.right);
+
+
+    // //OR
+
+    // //     Node maxOfBST(Node node) {
+    // //     while (node.right != null) {
+    // //         node = node.right;
+    // //     }
+    // //     return node;
     }
-
-    //OR
-
-    //     Node maxOfBST(Node node) {
-    //     while (node.right != null) {
-    //         node = node.right;
-    //     }
-    //     return node;
-    // }
     //==================================================
 
     //======================TASK#1b======================
     // This method takes only 2 parameters
     // root of a BST and the value of which you wanna the predecessor
     // You'll need to find the max of the BST and return it
-    public static Integer inOrderPred(BSTNode root, int value) {
+    public static Integer inOrderPred(BSTNode root, int value) {    //2 Cases
 
         BSTNode current = root;
         BSTNode predecessor = null;

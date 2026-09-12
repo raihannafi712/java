@@ -99,14 +99,12 @@ public class MinHeap {
             
             if (heap[parent] > heap[current]) {     //If parent == child, no need for swap
             
-            int temp = heap[current];               //Store the last value
+                int temp = heap[current];               //Store the last value
 
-            heap[current] = heap[parent];           //If parent is 20, currently last elemnent = 20 , parent = 20 
-            heap[parent] = temp;                    //Now parent is that lowest element (swap done)
+                heap[current] = heap[parent];           //If parent is 20, currently last elemnent = 20 , parent = 20 
+                heap[parent] = temp;                    //Now parent is that lowest element (swap done)
 
-            current = parent;                       //Change the current index to its parent's (where the next check will happen)
-
-
+                current = parent;                       //Change the current index to its parent's (where the next check will happen)
             } else {
                 break;                              
             }

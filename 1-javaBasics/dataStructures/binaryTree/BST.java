@@ -114,7 +114,8 @@ public class BST {
 
 
 
-    //  DELETION            (Basically if its a  leaf node then it just vanishes and if it has children then in-order trav wise successor(right subtree's smallest one))
+    //  DELETION (3 Cases)       
+    //Basically if its a  leaf node then it just vanishes and if it has children then in-order trav wise successor(right subtree's smallest one)    
     public void delete(int key) {
         root = deleteRec(root, key);
     }

@@ -7,8 +7,7 @@ public class Task2 {
     // and second & third parameter are as 2 integers
     // You'll need to find the lowest common ancestor of them and return it
     public static Integer lowestCommonAncestor( BSTNode root, Integer x, Integer y ){
-        
-        BSTNode current = root;                                     //
+        BSTNode current = root;                                     
 
         while (current != null) {
             

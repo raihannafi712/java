@@ -6,11 +6,12 @@ public class Task6 {
     // This method takes only one parameter
     // it is root of the given tree
     // You can use extra helper private static methods as per need
-    public static Boolean isBST(BSTNode root){
+    public static Boolean isBST(BSTNode root){                                                  /* IMPORTANT */
 
         return BSTHelper(root, null, null);
 
     }
+
 
     private static Boolean BSTHelper(BSTNode root , Integer min , Integer max){
 
