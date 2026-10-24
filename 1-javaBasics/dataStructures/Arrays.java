@@ -3,11 +3,11 @@ package dataStructures;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class arrayStructures {
+public class Arrays {
     
     public static void main(String[] args) {
 
-        // 4. Arrays
+        // Arrays
 
         // 1D arrays-
 
@@ -84,7 +84,12 @@ public class arrayStructures {
 
 
 
-        // Linear index and multidimensional array connection
+
+
+
+        // LINEAR INDEX (CHECK NOTE FOR BASICS)
+
+        // FOR 3D arrays-
 
         // If linear index and D1xD2xD3  is given
         // i = linear ÷ (d2 × d3)        → linear index across first dimension
@@ -96,6 +101,21 @@ public class arrayStructures {
         //linear = i×(D2×D3) + j×(D3) + k
 
         //So linear index 23 means: "the 24th slot in that long row" (23 if you start counting from 0). For your 3D array, which has 2×3×4 = 24 total slots, slot 23 is literally the very last one — there's no slot 24, the row ends there.
+
+
+
+        // FOR 2D arrays-
+
+        // If linear index and D1xD2 is given
+        // i = linear / D2               → linear index across first dimension
+        // j = linear % D2               → index across second dimension  
+
+        // If 2D dimensions and D1xD2 is given
+        //linear = i * D2 + j
+
+
+
+
 
 
 
