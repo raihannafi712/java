@@ -324,16 +324,16 @@ public class singlyLinkedList {
         Node rev(Node head){
 
             Node curr = head;
-            Node a = null;
+            Node prev = null;
             
             
             while (curr != null) {
-                Node b = curr.next;
-                curr.next = a;              //curr points at a and stops pointing at b
-                a = curr;                   //a becomes curr
-                curr = b;                   //Then curr becomes b(that Node is b and curr.when loop runs again, b will be the next one)
+                Node next = curr.next;
+                curr.next = prev;              //curr points at prev and stops pointing at next
+                prev = curr;                   //prev becomes curr
+                curr = next;                   //Then curr becomes next(that Node can be accessed by next and also curr. When loop runs again, b will be the next one)
             }
-            Node reversedHead = a;
+            Node reversedHead = prev;
 
             return reversedHead;            //New head is returned
         }
@@ -448,6 +448,8 @@ public class singlyLinkedList {
         Node c = new Node(3);
         Node d = new Node(66);
         Node e = new Node(78);
+        Node test = e;                          //It means the Node e can be accessed by 2 variables. e and test both.
+        Node test2 = new Node(e.data);          //This means test2 is a new Node and it has the value of the node e
         // 5 4 3 66 78
 
 

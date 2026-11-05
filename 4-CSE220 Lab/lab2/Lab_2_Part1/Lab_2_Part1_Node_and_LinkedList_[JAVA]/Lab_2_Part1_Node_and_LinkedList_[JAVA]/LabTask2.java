@@ -18,6 +18,7 @@ public class LabTask2 {
         int count2 = 0;
         Node new_head = null;
         Node new_tail = null;
+
         while (temp != null) {
 
             if (first_dig != 0 && count2 != 0 && count2 % first_dig == 0 ) {
@@ -36,6 +37,7 @@ public class LabTask2 {
             temp = temp.next;
             count2++;
         }
+        // Letters taken into the new list. T -> A -> C -> null
 
         Node a = null;
         Node curr = new_head;
@@ -43,10 +45,11 @@ public class LabTask2 {
         while (curr != null) {
             Node b = curr.next;
             curr.next = a;              //Curr points at a and stops pointing at b
-            a = curr;                   //a becomes curr
+            a = curr;                   //a variable now becomes curr. Like Node n1 was accessed by curr and now it can be accessed by a too 
             curr = b;                   //Then curr becomes b(that Node is b and curr.when loop runs again, b will be the next one)
         }
         Node reversedHead = a;
+        // Reversed the list. C -> A -> T -> null
 
         // Dummy head
         Node dummy = new Node(null);

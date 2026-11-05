@@ -49,6 +49,10 @@ class LinkedList{
         Node temp = head;
         int count = 0;
 
+        if (indx < 0 ) {
+            return null;
+        }
+
         while (temp != null) {
             if (count == indx) {
                 return temp;
@@ -69,7 +73,9 @@ class LinkedList{
             return;
         }
 
-        head = head.next;
+        Node temp = head;
+        head = head.next;           //Changed the head to the 2nd node
+        temp.next = null;           //removed the first node from the list permanently
     }
 
 

@@ -3,10 +3,10 @@ public class LabTask1 {
 	
     // No need to submit this task
     public static Boolean assembleCongaLine(Node head){
-        
+
         Node temp = head;
 
-        while (temp != null && temp.next != null) {
+        while (temp != null && temp.next != null) {                 //temp != null if the first node is empty
             if ((int) temp.elem >  (int)temp.next.elem) {
                 return false;
             }

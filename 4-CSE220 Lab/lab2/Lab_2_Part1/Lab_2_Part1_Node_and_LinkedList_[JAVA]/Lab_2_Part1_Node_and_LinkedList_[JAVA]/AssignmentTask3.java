@@ -3,27 +3,47 @@ public class AssignmentTask3 {
     
     // MUST SUBMIT this method
     public static Node alternateMerge( Node head1, Node head2 ){
-        
+
         Node temp_1 = head1;
         Node temp_2 = head2;
 
-
         while (temp_1 != null && temp_2 != null) {
+            
+            Node n = new Node(temp_2.elem);                     //If we did Node n = temp_2. It would be the same node with just another variable name
 
-            Node next1 = temp_1.next;                   //Saving the 2nd node so that LL doesn't get lost
-            Node next2 = temp_2.next;   
+            n.next = temp_1.next;
+            temp_1.next = n;
 
-            temp_1.next = temp_2;                       //1 -> 5 connection and list 1's other nodes are disconnected. ALSO if list1 has no other nodes left so this list2 node is the last
-
-            if (next1 != null) {                        
-                temp_2.next = next1;                    //Now 1 -> 5 -> 2 done
-            }
-
-            temp_1 = next1;                             //temp1 becomes 2, so 2nd node doesnt get changed and the next one will again in the loop
-            temp_2 = next2;             
+            temp_1 = temp_1.next.next;
+            temp_2 = temp_2.next;
         }
 
         return head1;
+
+
+        // OR
+
+        
+        // Node temp_1 = head1;
+        // Node temp_2 = head2;
+
+
+        // while (temp_1 != null && temp_2 != null) {
+
+        //     Node next1 = temp_1.next;                   //Saving the 2nd node so that LL doesn't get lost
+        //     Node next2 = temp_2.next;   
+
+        //     temp_1.next = temp_2;                       //1 -> 5 connection and list 1's other nodes are disconnected. ALSO if list1 has no other nodes left so this list2 node is the last
+
+        //     if (next1 != null) {                        
+        //         temp_2.next = next1;                    //Now 1 -> 5 -> 2 done
+        //     }
+
+        //     temp_1 = next1;                             //temp1 becomes 2, so 2nd node doesnt get changed and the next one will again in the loop
+        //     temp_2 = next2;             
+        // }
+
+        // return head1;
     } 
 
     //NOTE: if you find any issue with the driver code please inform AIB

@@ -4,10 +4,10 @@ public class AssignmentTask2{
     
     // MUST SUBMIT this method
     public static Node organizeBooks(Node head, Integer[] popularity) {
-        
+
         int list_length = popularity.length;
         
-        //Bubble sort
+        //Bubble sort (Descending order)
         for (int i = 0; i < (list_length - 1); i++) {               /* length - 1 because we will be traversing i+1 */
 
              Node temp = head;

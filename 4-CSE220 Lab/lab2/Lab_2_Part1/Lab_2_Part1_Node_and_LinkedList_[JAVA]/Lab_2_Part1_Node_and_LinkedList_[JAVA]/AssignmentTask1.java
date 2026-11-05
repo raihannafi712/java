@@ -6,44 +6,42 @@ public class AssignmentTask1 {
     // After you're done coding  MUST SUBMIT this method
     public static String checkSimilar( Node building1, Node building2 ){
         
-       Node temp_1 = building1;
-       Node temp_2 = building2;
-       int length_1 = 0;
-       int length_2 = 0;
+        int list_1_size = 0;
+        int list_2_size = 0;
+        Node temp1 = building1;
+        Node temp2 = building2;
 
-       while (temp_1 != null) {
-            length_1 ++;
-            temp_1 = temp_1.next;
-       }
+        while (temp1 != null) {
+            list_1_size++;
+            temp1 = temp1.next;
+        }
 
-        while (temp_2 != null) {
-            length_2 ++;
-            temp_2 = temp_2.next;
-       }
+        while (temp2 != null) {
+            list_2_size++;
+            temp2 = temp2.next;
+        }
 
-       temp_1 = building1;
-       temp_2 = building2;
-       int count_main = 0;
+        temp1 = building1;
+        temp2 = building2;
 
-       if (length_1 == length_2) {
+        if (list_1_size == list_2_size) {
             
-            while (count_main < length_1) {
+            while (temp1 != null) {
 
-                if (temp_1.elem.equals(temp_2.elem)) {          /* Comparing strings as usual with .equals() */
-                    count_main++;
-                    temp_1 = temp_1.next;
-                    temp_2 = temp_2.next;
+                if (temp1.elem.equals(temp2.elem)) {             /* Comparing strings as usual with .equals() */
+                    temp1 = temp1.next;
+                    temp2 = temp2.next;
                     
                 } else {
                     return "Not Similar";
                 }
-                
             }
-       } else {
-        return "Not Similar";
-       }
+            return "Similar";
 
-        return "Similar";
+        } else {
+            return "Not Similar";
+        }
+
     }
 
     //NOTE: if you find any issue with the driver code please inform AIB
