@@ -24,7 +24,9 @@ public class doublyLinkedList {
 
 
         // doublyLL ll = new doublyLL();            /* If method class is used */
-            
+        
+        //Node creation
+
         Node a = new Node(4);
         Node b = new Node(10);
         Node c = new Node(2);
@@ -48,7 +50,9 @@ public class doublyLinkedList {
         d.next = e;
         e.prev = d;
         e.next = null;      /* optional */  /* It's the tail */
-        // 4 <> 10 <> 2 <> 99 <> 13
+        // null < 4 <> 10 <> 2 <> 99 <> 13 > null  /* null.prev will make error because null is not a node. */     
+        
+        
 
 
 
@@ -102,6 +106,15 @@ public class doublyLinkedList {
         // deleteAt(newHead, 7);
         // display(newHead);
 
+
+        //Reverse LL
+        Node h = revDoubly(newHead);
+        display(h);
+
+        // Primarily - > null < 300 <> 4 <> 10 <> 2 <> 69 <> 99 <> 13 <> 400 > null
+        // Reversed  - > null < 400 <> 13 <> 99 <> 69 <> 2 <> 10 <> 4 <> 300 > null
+
+        //Double LL reversing may seem same but its not. At first it was 300.next = 4 and later, 300.next = null
 
 
 
@@ -260,6 +273,40 @@ public class doublyLinkedList {
         temp.next.prev = temp.prev;
 
 
+    }
+
+
+
+    //Reversing
+    // Primarily - > null < 300 <> 4 <> 10 <> 2 <> 69 <> 99 <> 13 <> 400 > null
+    // Reversed  - > null < 400 <> 13 <> 99 <> 69 <> 2 <> 10 <> 4 <> 300 > null
+
+    //Double LL reversing may seem same but its not. At first it was 300.next = 4 and later, 300.next = null
+    public static Node revDoubly(Node head) {
+        if (head == null || head.next == null) {
+            return head; // Empty list or single node
+        }
+
+        Node curr = head;
+        Node newHead = null;
+
+        while (curr != null) {
+            // 1. Temporarily save the original next node
+            Node nextTemp = curr.next;
+
+            // 2. Swap the next and prev pointers
+            curr.next = curr.prev;
+            curr.prev = nextTemp;
+
+            // 3. Keep track of the current node as the new head candidate
+            newHead = curr;
+
+            // 4. Move to the next node. 
+            // Notice we use curr.prev because the original 'next' is now stored there!
+            curr = curr.prev;
+        }
+
+        return newHead; // This will be the old tail, now the new head
     }
 
 

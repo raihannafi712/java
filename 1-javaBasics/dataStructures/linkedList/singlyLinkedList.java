@@ -320,7 +320,8 @@ public class singlyLinkedList {
 
 
 
-        //Reversing a linked list manually  (CHECK NOTES TO SEE HOW IT EXACTLY WORKS)
+        //Reversing a linked list manually  (CHECK NOTES TO SEE HOW IT EXACTLY WORKS)   
+        //For dummy headed LL, do the same process starting with the 2nd node and lastly connect the dummy head with new head
         Node rev(Node head){
 
             Node curr = head;
@@ -451,6 +452,17 @@ public class singlyLinkedList {
         Node test = e;                          //It means the Node e can be accessed by 2 variables. e and test both.
         Node test2 = new Node(e.data);          //This means test2 is a new Node and it has the value of the node e
         // 5 4 3 66 78
+
+
+
+
+
+        //Concept of null
+        Node h1 = null;                         //This is just null which can be accessed by h1
+        //h1.next or h1.prev = NullPointerException
+
+        Node h2 = new Node(null);         //This is an object or a Node that has a null value
+        //h1.next or h1.prev = no error
 
 
 

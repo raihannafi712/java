@@ -11,4 +11,12 @@ public class circularLL {
             this.val = val;
         }
     }
+
+
+    //All the operations are same as singly and doubly. Just make the connection linear and solve and then just make it circular again
+
+
+
+
+
 }
